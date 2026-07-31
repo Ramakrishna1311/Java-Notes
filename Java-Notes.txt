@@ -1,0 +1,956 @@
+
+
+### Programming Elements 
+
+
+``` java
+Module   : grouping packages is called 
+packages : Grouping classes is called
+class    :Its blueprint object it contains v,c,m,b,ic
+variable : can store data values its named momory location
+Data type: variable declare with specific datatype before it can use
+Method   : method is a block of code It doing an operations,task
+Block&Constructor :Storing values in variable
+Innerclasses      :grouping v,b,c,m,ic as separate group inside another class.
+```
+
+- **JDK (Java Development Kit)**: Tools to develop Java programs.
+- **JRE (Java Runtime Environment)**: Provides environment to run Java programs.
+- **JVM (Java Virtual Machine)**: Executes Java bytecode.
+
+#### what is java?
+
+```
+java is simple, high level ,object oriented programing language and its platform
+independent and secure.(Write once run anywhere).
+```
+
+### what is variable ?
+ - variable is a container which can store data values.
+#### 1.local variables:
+
+  ``Declare a inside a method,constructor and block``.
+#### 2.instance variable ?
+
+  ``Declare a inside a class and outside of method.``
+#### 3.static variable ?
+
+ ``  it should declare in static keyword only.``
+
+### what is datatype ?
+
+`` the datatype means every variable must be declare with a specific datatype before it can used.
+   
+ 
+ ## 1.primitive datatype:
+ 
+ ```
+   its predifined datatype stores simple values diretly memory. 
+    ex: int,byte,short,long,float,double,char,boolean... 
+ ```
+ ## 2.non-primitive datatype:
+ 
+ ```
+   its stores reference(memory addresses) to object ratherthan actual values.
+   ex:string,array,class...
+ ```
+   
+
+### what is method ?
+
+ - method is a block of code that performs a specific task and can be reused.
+
+##### 1 ) Method with no parameters & no return value :
+
+-->Takes nothing, returns nothing.
+## Ex :
+
+``` java
+void display() {  
+System.out.println("Hello");  
+}
+```
+
+##### 2. Method with parameters & no return value :
+
+- Takes input but does not return anything.
+
+``` java
+void add(int a, int b) {  
+    System.out.println(a + b);  
+}
+```
+
+##### 3. Method with no parameters & return value :
+
+- Returns value but takes no input.
+
+5``` java
+int getNumber() {  
+    return 10;  
+}
+```
+##### 4. Method with parameters & return value :
+
+- Takes input and returns output.
+
+``` java
+int add(int a, int b) {  
+    return a + b;  
+}
+```
+
+### what is constructor?
+
+-  A constructor is a special method in class when an initialize object when they
+ created.
+
+### Default Constructor :
+
+
+``It has No parameters Don't write any constructor .``
+
+
+##### Parameterized Constructor :
+
+`It has parameters when an object is created .
+
+### what is string ?
+
+ ``A string a datatype used to store text.
+ ``String is declare in "" ``
+##### 1.String Builder  :
+
+   ``It's mutable and thread not safe``
+   ## 2.String Buffer :
+   
+`It's mutable and thread is safe`
+### what is scanner ?
+
+ ``scanner is class used take input from the user
+ `` it also have own package.``
+
+### what is conditional statements?
+
+  ## if :
+  
+    the conditional true it will take 
+  ## else :
+   
+    the conditional false it will execute
+  ## if else if ladder : 
+  
+    when they are multiple conditions
+  ## nested if :
+  
+    nothing but inside the if condition
+  ## switch case :
+  
+    when you have many fixed choices / many statemnets
+
+ ### iteration statements ?
+ 
+    
+   ## for loop:
+   
+     when the number of iteration know 
+    
+   ## while loop:
+   
+    when the number of iterations is not known in advance
+    
+   ## do -while loop :
+   
+     Executes at least once, even if the condition is false
+ 
+
+## What is an array ?
+
+
+  ``array is collection of elements stores multiple values in same datatype in a single variable is called array ``
+
+   ## single dimensional array :
+    Stores elements in a single row
+    
+   ## multi-dimensional array :
+   
+    stores data in multiple rows and coloums
+
+##  Oop concepts ? :
+
+-organize code using **objects and classes**.
+## Inheritance :
+
+``-->It is possible to in-herit attributes and methods from one class to another .``
+
+it herits the sub class to super class meaning will call the child class
+name to it extends to parent class
+
+##### Multiple Inheritance :
+`` derived a class from two or morethan two super class is called MI.``
+
+##### Multilevel Inheritance :
+
+``Deriving a class from other derived class/interface is called MLI``
+## Polymorphism : 
+
+``-->many-forms it will have multiple method with same name and class same ``
+
+`` Methodloverloading :compile time,Multiple method with same name and diff parameters``
+
+  ``Methodoverriding : runtime,Same method in parent and child name`` ``
+ 
+##  Abstraction :
+ 
+It is provides hiding and implementing their essential functionality to the user
+
+## Encapsulation : 
+
+Sensitive data hide from the user then it will have public setter and getter Methods .
+
+
+## Exception handling :
+
+--> Exception is an unwanted and unexpected event disrupts the entire during program 
+exiecution.
+--> Handles runtime errors.
+- try --risky code written
+- catch -- handled exception
+- finally -- always exicuted 
+- throw -- explicitly through an exception
+- throws -- Declare exception in method signature
+
+##### Ex :
+``` java
+  Class ExceptionHandling{
+   public static void main(String[] args){
+     try{
+        int a=10;
+        int b=0;
+         int result=a/b;
+         System.out.println("Reslt : " +result);
+     }
+     catch(ArthmeticException e){
+          System.out.println("Can't divide by zero");
+     }
+     finally{
+         System.out.println("Program exicuted);
+         }
+     }
+   
+   }
+```
+
+it will have blocks 
+-->Checked Exacption :
+Occur in compile time 
+must be handled using try-catch or declared using throws.
+Example :
+ IoException
+ SqlException
+
+-->Uncheched Exception :
+Occur in runtime 
+not checked at the compile time 
+
+Example :
+  NullPointerException
+  ArthemeticException
+  ArrayIndexBoundOfException
+
+1)try : statement allows you to define block of code to be tested for errors while 
+it's being exicuted.
+
+2)catch :statement allows you to define block of code to be exicuted,if an error 
+ocuurs in the try block.
+  
+3)finally :it will always exicute the program the block of try and catch is it true
+are false they dont want they always exicute.
+
+throw :
+ Used to explicitly throw an exception.
+ It class level throws the exception and full of program 
+
+throws :
+ Used to declare exceptions in method signature.
+  Method level it throw the exception and the program will stop.
+
+```
+KEYPOINTS :
+->Use try-catch to handle exceptions
+->finally block always executes (except JVM shutdown)
+->Helps prevent program crashes
+->Improves readability and debugging
+```
+
+
+```
+Collection : 
+  Collection is a framework it provides set of classes and interfaces to store,
+  manipulate,and process groups of objects efficiently.
+
+What is collection framework ?
+  Storing data
+  Accessing data
+  Manipulating data
+```
+
+``` Collectionframework
+We have some core interfaces :
+ 1)List :
+   Ordered collection
+   Allow dupilcates 
+   Common classes :
+     ArrayList
+     LinkedList
+     Vector
+     Stack
+
+     Ex:
+       List<String> l=new ArrayList<>():
+ 
+ 2)Queue :
+   Follows in FIFO(First-In-First-Out)
+    Common classes :
+     PriorityQueue  
+     LinkedList
+      Key method : Poll(); , Peek(); 
+     Ex:   
+       Queue<Integer> q=new PriorityQueue<>();
+
+ 3)Set :
+   Unordered collection
+   Does not allow duplicates  
+     Hashset<>
+     LinkedHashSet<>
+     TreeSet<>
+   
+     Ex:
+       Set<Integer> s=new HashSet<>();
+
+ 4) Map :
+    It stores key-values pairs
+    Keys must be unique
+    HashMap<String,Integer> map=new Hashmap<>();
+    LinkedHashMap<>
+    TreeMap<>
+
+     Ex:
+      Map<String,Integer> map=new Hashmap<>();
+```
+
+
+When you use what ?
+
+Use List → when order & duplicates matter
+Use Set → when uniqueness is required,doesn't allow duplicate
+Use Queue → for processing tasks in order(FIFO)
+Use Map → for key-value relationships must ne unique
+
+
+What is garbage collector ?
+ objects are created in heap memory. 
+ When an object is no longer referenced by any part of the program, 
+ it becomes eligible for garbage collection, and the JVM removes it to free memory.
+
+ It works :
+   Objects are created → stored in heap
+   References point to objects
+   When references are removed → object becomes unreachable
+   GC identifies and deletes such objects
+  
+   Ex: class Test{
+        p s v main(String[] args){
+           Test t=new Test();
+           Test t1=new Test();
+            t=null;  //object eligible for gc
+            t1=null;
+         }
+      }
+
+1. Mark
+
+Identifies reachable and unreachable objects
+
+2. Sweep
+
+Removes unreachable objects
+
+3. Compact
+
+Rearranges memory to avoid fragmentation
+
+
+
+What is servlet ?
+A Servlet is a Java class that:
+
+->Receives HTTP requests
+->Processes them
+->Sends back a response (HTML, JSON, etc.)
+
+ It’s mainly used for building web applications.
+
+Servlet architecture :
+ 
+Client (Browser)
+       ↓
+Web Server
+       ↓
+Servlet Container (Web Container)
+       ↓
+Servlet (Java Class)
+       ↓
+Response back to Client 
+
+Java packages :
+javax.servlet
+javax.servlet.http
+
+-->java.Servlet 
+   Interface : 
+Servlet
+ServletRequest
+ServletResponse
+ServletConfig
+ServletContext
+ServletDispatcher
+
+-->Javax.Servlet.http
+ class
+ GenericServlet class
+ 
+  Interfaces:
+ HttpServletRequest
+ HttpServletResponse
+ HttpSession
+
+
+Three methods :
+->We initialize the servlet by calling init().->only once (Set up)
+->The servlet calls the Service() method for processing the client request. ->Multiple types
+->We can terminate the entire server destroy() Method.->clean up the all what we set up in the program
+
+
+Encapsulation
+
+ encapsulation is make sure that "sensitive" data hidden from user.
+ it provides the variables/attributs as public 
+ provide public set and get methods
+
+
+``` java Encapsulation
+  class Company{
+   private String name;
+   private int age;
+
+    public String getname(){
+     return name;	
+   }
+   public int getage(){
+    return age;
+  }
+  public void setname(String name){
+    this.name=name;
+  }
+  public void setage(int age){
+   this.age=age;
+  }
+}
+  Class Identify{
+  public static void main(STring[] args){
+    Company i=new Company();
+      i.setname("Ramakrishna);
+      i.setage(25);
+       System.out.println("name " +i.getname());
+       System.out.println("age " +i.getid());
+       }
+     }
+}
+```
+
+what is inheritance 
+  it is possible to attributes/methods one class to another class is called interitance.
+
+what is  multiple imheritance 
+ derived a class from two or more than two super class is called mi.
+
+
+
+
+ MI:
+``` java MultipleInheritance
+   interface Father{
+    void showFather();
+     }
+      interface Mother{
+       void showMother();
+     }
+     class Child implements Father,Mother{ //concrete method
+      public void showFather(){
+       System.out.println("Father is exicuted");
+       }
+       public void showMother(){
+        System.out.println("Mother is exicuted");
+       }
+       public void showChild(){
+        System.out.println("Child is exicuted");
+        }
+        }
+       class Family{
+         public static void main(String[] args){
+           Child c=new Child();
+            c.showFather();
+            c.showMother();
+            c.showChild();
+           }
+          }
+```
+
+ #MLI: 
+        what is multilevel inheritance
+
+ derived a class from derived class/interface is called mli.
+
+
+``` java MultilevelInheritance
+    class Animal{
+	 void s1() {
+		System.out.println("s1 display");
+	}
+       }
+	 class Dog extends Animal{
+		 void s2() {
+			System.out.println("s2 display");
+	  }
+	 }
+	 class Cat extends Dog{
+		void s3() {
+			 System.out.println("s3 display");
+	  }
+	 }
+
+public class Multilevelinheritance {
+
+	public static void main(String[] args) {
+		Cat c=new Cat();
+		c.s1();
+		c.s2();
+		c.s3();
+	
+	}
+
+      }
+```
+  
+ Polymorphism :
+
+same name with multiple forms is the concept of polymorphism
+its allows a single action to perfomed in a ways,typically through a interface or
+super class
+     
+     MethodOverloading :
+       Multilple method with same name and class name but diff parameters
+      
+``` java MethodOverLoading
+      class Multiplication {
+         
+         static void multiply(int a, int b){
+            System.out.println(a*b);
+           }
+         static void multiply(int a,int b,int c){
+            System.out.println(a*b*c);
+            }
+         static void multiply(double a,double b){
+           System.out.println(a*b);
+           }
+           public static void main(String[] args){
+            Multiplication ml=new Multiplication();
+
+                ml.multiply(30,20);       
+                ml.multiply(2,3,4);
+                ml.multiply(1.5,2.4);
+              }
+          }
+```
+                 
+ MethodOverriding (Runtime) :
+        Same method chilld and parent class 
+``` java MethodOverriding
+         class Parent{
+          void display(){
+               System.out.println("parent proprties");
+         }
+         }
+       class Child extends Parent{
+        void display(){
+          System.out.println("Child display");
+          }
+        }
+        class Grandparent extends Parent{
+           void display(){
+            System.out.println("grandparent display");
+           }
+        }
+      public  class Methodoverring{
+         public static void main(String[] args){
+          Parent p1=new Parent();
+           p1.display();
+            p1=new Grandparent();
+             p1.display();
+            }
+         }
+```
+
+     
+ abstraction :
+
+   process of hiding internal implementation details and showing only essential 
+   functionality to the user.
+  
+
+``` java  abstraction
+ abstract class Vehicle{
+      abstract void start();
+ 
+        void fueltype(){
+         System.out.println("uses fuel");
+        }
+    }
+  class Car extends Vehicle{
+    void start(){
+     System.out.println("Car is stated");
+}
+}
+class Engine {
+  public static void main(String[] args){
+    Vehicle v=new Car();
+      v.start();
+      v.fueltype();
+  }
+}
+```
+
+
+Sumof prime numbers :
+
+  class Sumprime{
+   public static void main(String[] args){
+       
+``` java
+       public class Test{
+        public static void main(String[] args){
+       for(int i=2;i<=100;i++){
+               int a=0;
+            for(int j=2;j<=i/2;j++){
+               
+              if(i% j==0){
+                a=1;
+                break;
+              }
+             }
+            if(a==0){
+            
+            System.out.println( + i "");
+          }
+          }
+         }  
+         } 
+```
+
+Reverse String :
+``` java
+ public class Reverse{
+   public static void main(String[] args){
+      String  s = "Ramakrishna";
+      String  rev = " ";
+       for(int i= s.length() -1; i>=0 ; i-- ){
+          rev += s.charAt( i );
+       }
+         System.out.println(rev);
+   }
+ 
+ } 
+```
+
+
+### TableprintOfScannerclass :
+
+
+``` java
+    class Table{
+     public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number : ");
+         int j=sc.nextInt();
+            for(int i=1;i<=10;i++){
+              System.out.println( j + " x " + i + " = " + j*i);
+                 }
+               }
+            }
+```
+
+# COLLECTION FRAMEWORK HIERARCHY IN JAVA
+----------------------------------------------------------------------
+### ![[WhatsApp Image 2026-04-22 at 4.41.26 PM.jpeg]]
+
+# JAVA SERVLET
+
+##### What is Servlet :
+
+``A servlet is a java class is used to create dynamic web applications by processing HTTP Request and sending Response .``
+
+##### We have two packages :
+###### 1.javax.servlet :
+Interfaces :
+``` java
+Servlets
+ServletRequest
+ServletResponse
+ServletConfig
+ServletContext
+ServletDispatcher 
+```
+###### 2.javax.servlet.HTTP :
+
+class :
+Generic Servlet class :
+
+Interfaces :
+``` java
+HTTPServletRequest
+HTTPServletResponse
+HTTPSession
+```
+
+Class :
+HTTP Servlet :
+  ``To convert a normal java class into java servlets .``
+
+### Three Approaches :
+
+``` java
+1. By implementing Servlet Interface
+2. extending Generic Servlet class
+3. extending Http servlet class
+`````
+
+### JAVA SERVLETS :
+
+1. We initialize the servlet by calling ``init ()`` Method
+2. The servlet calls the ``Service ()`` method for processing the client Request.
+3. We can terminate the entire server ``destroy ()`` method.
+### 1. ``init () ``:
+ called ``only once`` when your servlet is initialized .
+- called once (Initial setup)
+
+`Syntax :`
+``` ini()
+   public void init () throws ServletException {
+      // Statements ;
+   }
+```
+### 2. `Service ()` :
+
+-It's first method that gets called by the servlet container (like Apache tomcat ) whenever a client sends a request .
+- `Called Multiple time Handled Request`
+-The service checks the Http Method (Get, Post, Put, Delete).
+
+``Syntax :``
+
+``public void service(ServletRequest request,ServletResponse response)throws ServletException,IOException {}
+
+1.  `doGet () `: Getting the data :
+
+`Syntax :`
+
+`public void doGet(ServletRequest request,Servlet Response) throws ServletException,IoException{ }`
+
+2. `doPost () `: Inserting the data
+
+`Syntax :`
+
+`public void doPost(ServletRequest request,Servlet Response) throws ServletException,IoException{ }`
+
+3. `doPut () `:  Update the data
+
+	`Syntax :`
+
+`public void doPut(ServletRequest request,Servlet Response) throws ServletException,IoException{ }`
+
+4. doDelete () : Deletion purpose 
+
+`Syntax :`
+
+`public void doPut(ServletRequest request,Servlet Response) throws ServletException,IoException{ }`
+
+### 3 . `destroy ()` :
+
+If you want to terminate the entire java servlet 
+
+-`called once (Clean Up)`
+
+`Syntax :`
+
+`public void destroy {}`
+
+### The Servlet of Code is :
+
+-The Example of servlet program this the page of  `Enter Your Name`.
+
+``` java servlet 
+public void doGet(ServeletRequest request,ServletResponse response)throws ServletException,IoException{
+
+response.setContentType("text/html");
+PrintWriter out=response.getWriter();
+
+out.println("<html>");
+out.println("<body>");
+out.println("<h2>Enter Your name "</h2>");
+out.println("<form page="name" action="MyServlet" >");
+out.println("Enter name :<input type = "text" name="Username"/");
+out.println("<input type ="Submit" value="Submit"/>');
+out.println("</form>");
+out.println("</body>");
+out.println("</html>);
+}
+```
+
+``` java Servlet
+public void doPost(ServletRequest request,ServletResponse response)throws ServletException,IoException{
+response.getContentType("text/html);
+PrintWriter out=response.getWriter();
+
+String name=request.getParameter("username");
+out.println("<html>");
+out.println("<h2> Enter your name </h2>");
+out.println("<h3> Hello ," + name + " !</h2>);
+out.println("</html>);
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIST :
+ public class Main {
+    public static void main(String[] args) {
+      List<Integer> l=new LinkedList<>();
+      l.add(1);
+      l.add(2);
+      l.add(3);
+      System.out.println(l);
+      System.out.println("total elements represents : " +l.get(1));
+      System.out.println(+ l.size()); 
+      System.out.println( + l.remove(2));
+      System.out.println(+ l.size());
+      
+      System.out.println();
+      
+      List<Integer> l1=new ArrayList<>();
+      
+        l1.add(23);
+        l1.add(24);
+        l1.add(25);
+        System.out.println(l1);
+        System.out.println(+l1.get(2));
+        System.out.println(+l1.size());
+        System.out.println(+l1.remove(23));
+        
+        System.out.println();
+        
+        List<String> l2=new Vector<>();
+        
+        l2.add("Ram");
+        l2.add("Kittu");
+        l2.add("Dummu");
+        
+        System.out.println(l2);
+        System.out.println(+l2.size());
+        // System.out.println(+l2.contains(l2));
+        System.out.println(l2.add("Chinna"));
+        System.out.println(+l2.size());
+        System.out.println(+l2.indexOf(3));
+        
+        List<Integer> l3=new Stack<>();
+        
+        l3.add(11);
+        l3.add(22);
+        l3.add(33);
+        
+        System.out.println(l3);
+        System.out.println(+l3.size());
+        System.out.println(+l3.get(1));
+        System.out.println(+l3.indexOf(2));
+        
+        
+        
+      System.out.println();
+      
+      Vector<Integer> v=new Stack<>();
+      v.add(123);
+      v.add(456);
+      v.add(789);
+      System.out.println(v);
+      System.out.println(v.size());
+      System.out.println(v.get(0));
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
