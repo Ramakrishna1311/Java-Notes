@@ -1,5 +1,6 @@
 
 This is Total Java Notes for Everyone
+This is java Notes
 
 ### Programming Elements 
 
